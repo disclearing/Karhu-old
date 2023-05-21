@@ -1,0 +1,320 @@
+License: 'null'
+Prefix: '&8[&b&lKarhu&8] '
+VerbosePrefix: '&8[&b&lVERBOSE&8] '
+AlertsMessage: '&3%player% &8- &3%check% &3(&bx%vl%&3)'
+VerboseMessage: '&3%player% &8x &3%check%'
+AlertsHoverableMessage: |-
+  &7%info%
+  (Ping: %ping% TPS: %tps%) &a(Click to teleport)
+AlertsClickCommand:
+  executor: 'player' #This can be player or console
+  command: 'tp %player%'
+AlertsBanMessage: '&b%player% &7got autobanned for &b%check%'
+BanCommand: ban %player% Hacked client
+PlayerLogFile: true
+autoban: true
+bypass-permission: false #allows you to bypass autoban with permission karhu.bypass
+autoban-cancel-wait: false
+transaction-exploit-fix: true #this might cause false kicks, but also patches some disablers
+autoban-countdown-message: '&8[&b&lKarhu&8] &b&l%player% &bwill be autobanned in 15 seconds'
+
+gui:
+  name: '&bKarhu'
+
+commands:
+  main-command:
+    name: 'karhu'
+  autoban:
+    enabled: '&b&lKARHU &7// &cAutoban on!'
+    disabled: '&b&lKARHU &7// &aAutoban off!'
+  alerts:
+    enabled: '&b&lKARHU &7// &aAlerts on!'
+    disabled: '&b&lKARHU &7// &cAlerts off!'
+  verbose:
+    enabled: '&b&lKARHU &7// &aVerbose on!'
+    disabled: '&b&lKARHU &7// &cVerbose off!'
+  exempt:
+    enabled: '&b&lKARHU &7// &b&l%player% &bwas exempted'
+    disabled: '&b&lKARHU &7// &b&l%player% &bwas un-exempted'
+    mention: '&b&lKARHU &7// &cMention a player you want to exempt!'
+  help:
+    line-1: '&3&l✧ &b&lKarhu &3&l✧ '
+    line-2: ' '
+    line-3: '&b* &7/karhu alerts - check alerts'
+    line-4: '&b* &7/karhu verbose - check verboses'
+    line-5: '&b* &7/karhu pastelogs - paste all logs to hastebin'
+    line-6: '&b* &7/karhu GUI - use GUI'
+    line-7: '&b* &7/karhu exempt - exempts player'
+    line-8: '&b* &7/karhu autoban - toggle autoban'
+    line-9: '&b* &7/karhu reload - reload config'
+    line-10: ' '
+
+default-version: '1_8' #only change if you have 1.7.10 spigot
+
+checks:
+  #COMBAT
+  ReachA:
+    enabled: true
+    autoban: true
+    ban-vl: 20
+  ReachB:
+    enabled: true
+    autoban: false
+    ban-vl: 15
+  HitboxA:
+    enabled: true
+    autoban: false
+    ban-vl: 20
+  AimA:
+    enabled: true
+    autoban: true
+    ban-vl: 20
+  AimB:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  AimC:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  AimD:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  AimE:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  AimF:
+    enabled: true
+    autoban: true
+    ban-vl: 20
+  AimG:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  AimH:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  AimI:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  AimJ:
+    enabled: true
+    autoban: true
+    ban-vl: 20
+  AimK:
+    enabled: true
+    autoban: true
+    ban-vl: 20
+  AimL:
+    enabled: true
+    autoban: true
+    ban-vl: 20
+  AimM:
+    enabled: true
+    autoban: true
+    ban-vl: 20
+  AimO:
+    enabled: true
+    autoban: true
+    ban-vl: 20
+  AutoclickerA:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  AutoclickerB:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  AutoclickerC:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  AutoclickerD:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  AutoclickerE:
+    enabled: true
+    autoban: true
+    max-cps: 20
+    ban-vl: 15
+  AutoclickerF:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  KillauraA:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  KillauraB:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  KillauraC:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  KillauraD:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  KillauraE:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  KillauraF:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  KillauraG:
+    enabled: true
+    autoban: true
+    ban-vl: 10
+  KillauraH:
+    enabled: true
+    autoban: true
+    ban-vl: 20
+  KillauraI:
+    enabled: true
+    autoban: true
+    ban-vl: 20
+  KillauraJ:
+    enabled: true
+    autoban: true
+    ban-vl: 20
+  VelocityA:
+    enabled: true
+    autoban: false
+    ban-vl: 15
+  VelocityB:
+    enabled: true
+    autoban: false
+    ban-vl: 15
+
+  #Movement
+  SpeedA:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  SpeedB:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  SpeedC:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  OmniSprintA:
+    enabled: true
+    autoban: false
+    ban-vl: 20
+  MotionA:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  MotionB:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  MotionC:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  InventoryA:
+    enabled: true
+    autoban: true
+    ban-vl: 20
+  InventoryB:
+    enabled: true
+    autoban: true
+    ban-vl: 20
+  FlyA:
+    enabled: true
+    autoban: true
+    ban-vl: 20
+  FlyB:
+    enabled: true
+    autoban: true
+    ban-vl: 20
+  StepA:
+    enabled: true
+    autoban: true
+    ban-vl: 10
+  StepB:
+    enabled: true
+    autoban: true
+    ban-vl: 10
+  NofallA:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  NofallB:
+    enabled: true
+    autoban: true
+    ban-vl: 20
+  JesusA:
+    enabled: true
+    autoban: true
+    ban-vl: 20
+  FastLadderA:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  ScaffoldA:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  BoatFlyA:
+    enabled: true
+    autoban: false
+    ban-vl: 20
+  NoSlowA:
+    enabled: true
+    autoban: true
+    ban-vl: 20
+  PhaseA:
+    enabled: false
+    autoban: false
+    ban-vl: 20
+
+  #PACKET
+  TimerA:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  TimerB:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  BadPacketsA:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  BadPacketsB:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  BadPacketsC:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  BadPacketsD:
+    enabled: true
+    autoban: true
+    ban-vl: 15
+  BadPacketsE:
+    enabled: true
+    autoban: true
+    ban-vl: 5
+  PingSpoofA:
+    enabled: false
+    autoban: false
+    ban-vl: 30
+  PingSpoofB:
+    enabled: false
+    autoban: false
+    ban-vl: 30

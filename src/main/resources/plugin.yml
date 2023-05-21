@@ -1,0 +1,8 @@
+name: Karhu
+version: 1.9.30
+main: me.liwk.karhu.Karhu
+website: https://karhu.cc
+api-version: 1.13
+authors: [LIWK]
+description: KarhuAC
+softdepend: [ViaVersion, ProtocolSupport, ProtocolLib]
